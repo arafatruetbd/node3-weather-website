@@ -10,8 +10,9 @@ request({ url, json: true }, (error, { body }) => {
     } else if (body.cod==="404") {
         callback('Unable to find location', undefined)
     } else {
-        callback(undefined, body.name + ' It is currently ' + body.main.temp + ' degress out. There is a ' + body.main.humidity + ' of humidity.')
-    }
+        callback(undefined,' It is currently ' + body.main.temp + ' Degress Celcius. There is a ' + body.main.humidity+'% of humidity.Maximum Temperature: '+body.main.temp_max+'. Minimum Temperature: '+body.main.temp_min)
+      
+}
 })
 }
 
